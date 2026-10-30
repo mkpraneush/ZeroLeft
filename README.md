@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ZeroLeft - Surplus Produce Marketplace
 
 ZeroLeft connects local vendors selling surplus produce with nearby customers at discount prices to prevent food waste.
@@ -72,3 +73,7 @@ npm run dev
   ```
 - **Vite Proxy**: Configured in `vite.config.ts` to forward `/auth`, `/customer`, `/vendor`, `/products`, `/reservations`, `/media`, `/health`, and `/ws` to `http://127.0.0.1:8000`.
 
+=======
+# ZeroLeft
+Smart Web-Based Surplus-Selling System for Street Vendors
+>>>>>>> 9484c46185f1eaa051d97464211d614219d359d7
