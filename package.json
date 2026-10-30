@@ -1,0 +1,40 @@
+{
+  "name": "expo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "backend": "cd backend && .\\venv\\Scripts\\python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000",
+    "server": "npm run backend",
+    "start": "concurrently -n \"backend,frontend\" -c \"cyan,magenta\" \"npm run backend\" \"npm run dev\"",
+    "dev:all": "npm run start",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^10.0.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.5"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^6.0.1",
+    "@tanstack/react-query": "^5.105.0",
+    "@types/leaflet": "^1.9.22",
+    "axios": "^1.21.0",
+    "date-fns": "^4.4.0",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^1.62.0",
+    "react-hook-form": "^7.91.0",
+    "react-hot-toast": "^2.6.1",
+    "react-router-dom": "^7.18.4",
+    "socket.io-client": "^4.8.4",
+    "zod": "^4.6.7",
+    "zustand": "^5.0.16"
+  }
+}

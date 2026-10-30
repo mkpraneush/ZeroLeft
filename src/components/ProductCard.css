@@ -1,0 +1,195 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); }
+
+.product-card--inactive { opacity: 0.72; }
+.product-card--inactive:hover { transform: translateY(-2px); }
+
+/* Image */
+.product-card-image-wrap {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  background: var(--gray-100);
+}
+
+.product-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.product-card:hover .product-card-image { transform: scale(1.05); }
+
+.product-card-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  background: linear-gradient(135deg, var(--green-50), var(--cream-200));
+}
+
+.product-card-stock-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.product-card-live-dot {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 0.05em;
+}
+
+.live-pulse {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #4ade80;
+  border-radius: 50%;
+  animation: pulse-soft 1.5s ease infinite;
+}
+
+/* Body */
+.product-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--space-4);
+}
+
+.product-card-meta {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.product-card-category { text-transform: capitalize; }
+
+.product-card-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.product-card-shop {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  margin-bottom: var(--space-3);
+}
+
+.product-card-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.product-card-price {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+.price-currency {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--orange-500);
+}
+.price-amount {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--orange-500);
+  line-height: 1;
+}
+.price-unit {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+}
+
+.product-card-distance {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.78rem;
+  color: var(--gray-500);
+  background: var(--gray-100);
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+}
+
+.product-card-stock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--gray-600);
+  margin-bottom: var(--space-2);
+}
+.stock-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.stock-detail { color: var(--gray-400); margin-left: 2px; }
+.stock-reserved {
+  font-size: 0.75rem;
+  color: var(--orange-500);
+  background: var(--orange-50);
+  padding: 1px 6px;
+  border-radius: var(--radius-full);
+}
+
+/* Progress bar */
+.product-card-progress {
+  height: 5px;
+  background: var(--gray-100);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--space-2);
+}
+.product-card-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--green-600), var(--green-400));
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+}
+.product-card-progress-bar.low {
+  background: linear-gradient(90deg, var(--orange-600), var(--orange-400));
+}
+
+.product-card-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: var(--gray-500);
+  margin-bottom: var(--space-1);
+}
